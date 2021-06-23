@@ -1,5 +1,6 @@
 .body {
     background-color: gray;
+    border-radius: 5px;
     height: 300px;
     width: 200px;
     display: flex;
@@ -8,60 +9,79 @@
     align-items: center;
 }
 
+.top-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 25%;
+    width: 100%;
+}
+
 .screen {
     background-color: greenyellow;
-    height: 15%;
-    width: 80%;
+    height: 70%;
+    width: 65%;
+    border-radius: 5px;
+    margin: 5px;
+    overflow: scroll;
+}
+
+.display {
+    word-wrap: break-word;
+    text-align: center;
 }
 
 .clear {
-    background-color: red;
-    /* height: 30px;
+    height: 30px;
     width: 30px;
-    margin: 10px; */
+    margin: 5px;
+    border-radius: 5px;
 }
 
 .keypad {
-    /* background-color: red; */
     display: flex;
-    height: 80%;
+    height: 75%;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 .numbers {
-    /* background-color: hotpink; */
     width: 150px;
     display: inline-flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .num-butt {
     height: 30px;
     width: 30px;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .zero {
     height: 30px;
     width: 80px;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .equals {
     height: 30px;
     width: 30px;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .signs {
-    /* background-color: indianred; */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .sign-butt {
     height: 30px;
     width: 30px;
+    margin: 10px;
+    border-radius: 5px;
 }

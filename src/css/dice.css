@@ -1,0 +1,59 @@
+.dice-set {
+    background-color: thistle;
+    display: flex;
+}
+
+.die {
+    height: 150px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .d2 {
+    background-color: red;
+    border-style: solid;
+    border-radius: 100px;
+    border-width: 5px;
+    height: 90%;
+    width: 90%;
+    text-align: center;
+} */
+
+.d4 {
+    background-color: orange;
+    height: 90%;
+    width: 90%;
+    text-align: center;
+}
+
+.d6 {
+    background-color: yellow;
+    height: 10%;
+}
+
+.d8 {
+    background-color: green;
+    height: 10%;
+}
+
+.d10 {
+    background-color: blue;
+    height: 10%;
+}
+
+.d12 {
+    background-color: purple;
+    height: 10%;
+}
+
+.d20 {
+    background-color: white;
+    height: 10%;
+}
+
+.die-clear {
+    height: 10%;
+}

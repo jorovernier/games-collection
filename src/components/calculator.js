@@ -25,9 +25,25 @@ class Calculator extends React.Component {
 
     setNumber(num){
         if (!this.state.method) {
-            this.setState({number1: num})
-        } else if (this.state.method){
-            this.setState({number2: num})
+            if (!this.state.number1){
+                this.setState({number1: num})
+            } else if (this.state.number1){
+                var bigNum1 = '';
+                bigNum1 = bigNum1.concat(this.state.number1, num);
+                this.setState({
+                    number1: bigNum1
+                })
+            }
+        } else if (this.state.method && this.state.number1){
+            if (!this.state.number2){
+                this.setState({number2: num})
+            } else if (this.state.number2){
+                var bigNum2 = '';
+                bigNum2 = bigNum2.concat(this.state.number2, num);
+                this.setState({
+                    number2: bigNum2
+                })
+            }
         };
     };
 
@@ -70,8 +86,12 @@ class Calculator extends React.Component {
     render(){
         return(
             <div className='body'>
-                <p className='screen'>{this.state.number1 + this.state.method + this.state.number2 + (this.state.number3 ? ('=' + this.state.number3) : (''))}</p>
-                <button className='clear' onClick={() => this.clear()}>c</button>
+                <div className='top-part'>
+                    <div className='screen'>
+                        <p className='display'>{this.state.number1 + this.state.method + this.state.number2 + (this.state.number3 ? ('=' + this.state.number3) : (''))}</p>
+                    </div>
+                    <button className='clear' onClick={() => this.clear()}>c</button>
+                </div>
                 <div className='keypad'>
                     <div className='numbers'>
                         <button className='num-butt' onClick={() => this.setNumber(1)}>1</button>
