@@ -1,0 +1,67 @@
+.body {
+    background-color: gray;
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.screen {
+    background-color: greenyellow;
+    height: 15%;
+    width: 80%;
+}
+
+.clear {
+    background-color: red;
+    /* height: 30px;
+    width: 30px;
+    margin: 10px; */
+}
+
+.keypad {
+    /* background-color: red; */
+    display: flex;
+    height: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.numbers {
+    /* background-color: hotpink; */
+    width: 150px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.num-butt {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.zero {
+    height: 30px;
+    width: 80px;
+    margin: 10px;
+}
+
+.equals {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.signs {
+    /* background-color: indianred; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sign-butt {
+    height: 30px;
+    width: 30px;
+}
