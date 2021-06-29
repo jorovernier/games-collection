@@ -1,59 +1,108 @@
 .dice-set {
-    background-color: thistle;
+    min-width: 300px;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .die {
-    height: 150px;
-    width: 100px;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    perspective: 600px;
 }
 
-/* .d2 {
-    background-color: red;
-    border-style: solid;
-    border-radius: 100px;
-    border-width: 5px;
-    height: 90%;
-    width: 90%;
-    text-align: center;
-} */
+/* D4 Die */
 
 .d4 {
-    background-color: orange;
-    height: 90%;
-    width: 90%;
-    text-align: center;
+    position: relative;
+    margin: 100px auto;
+    height: 500px;
+    width: 100px;
+    transform-style: preserve-3d;
+    animation: spin 10s linear infinite;
+    transform-origin: 116px 200px 116px;
 }
+
+@keyframes spin {
+    from {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    to {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+.d4.d4-show1 { transform: rotateY(-19.5deg) rotateX(180deg) translateY(400px);}
+.d4.d4-show4 { transform: rotateX(60deg) rotateY(19.5deg) translateX(116px) translateY(200px) translateZ(326px);}
+.d4.d4-show3 { transform: rotateX(-60deg) rotateY(19.5deg);}
+.d4.d4-show2 { transform: rotateY(-90deg) rotateZ(60deg) rotateX(-180deg) translateY(400px);}
+.d4-side {
+    position: absolute;
+    border-style: solid;
+    border-width: 200px 0 200px 346px;
+    transform-origin: 0 0;
+}
+.d4-1 {
+    border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
+    transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
+}
+.d4-2 {
+    border-color: transparent transparent transparent rgba(192, 38, 38, 0.6);
+    transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
+}
+.d4-3 {
+    border-color: transparent transparent transparent rgba(21, 23, 182, 0.9);
+    transform: rotateX(60deg) rotateY(19.5deg);
+}
+.d4-4 {
+    border-color: transparent transparent transparent rgba(56, 201, 19, 0.8);
+    transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
+}
+
+/* D6 Die */
 
 .d6 {
-    background-color: yellow;
-    height: 10%;
+    font-size: 80px;
+    width: 160px;
+    height: 160px;
+    margin: 40px auto;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s;
 }
+.d6.d6-show1 { transform: translateZ(-80px) rotateY(   0deg); }
+.d6.d6-show5 { transform: translateZ(-80px) rotateY(-180deg); }
+.d6.d6-show4 { transform: translateZ(-80px) rotateY( -90deg); }
+.d6.d6-show3 { transform: translateZ(-80px) rotateY(  90deg); }
+.d6.d6-show2 { transform: translateZ(-80px) rotateX( -90deg); }
+.d6.d6-show6 { transform: translateZ(-80px) rotateX(  90deg); }
+.d6-side {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: rgba(255, 99, 71, 0.6);
+    border: 1px solid rgba(0,0,0,.5);
+    color: white;
+    text-align: center;
+    line-height: 160px;
+}
+.d6-1 {transform: rotateX(0deg) translateZ(80px);}
+.d6-5 {transform: rotateX(90deg) translateZ(80px);}
+.d6-4 {transform: rotateY(90deg) translateZ(80px);}
+.d6-3 {transform: rotateY(-90deg) translateZ(80px);}
+.d6-2 {transform: rotateX(-90deg) translateZ(80px);}
+.d6-6 {transform: rotateY(-180deg) translateZ(80px);}
 
-.d8 {
-    background-color: green;
-    height: 10%;
-}
+/* D8 Die */
 
-.d10 {
-    background-color: blue;
-    height: 10%;
-}
+/* D10 Die */
 
-.d12 {
-    background-color: purple;
-    height: 10%;
-}
+/* D12 Die */
 
-.d20 {
-    background-color: white;
-    height: 10%;
-}
+/* D20 Die */
 
-.die-clear {
-    height: 10%;
-}
+/* Clear Button */
+
+/* .die-clear {} */

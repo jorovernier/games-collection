@@ -17,15 +17,13 @@
 }
 
 .cards {
-  /* border-radius: 5px; */
-  /* box-shadow: 5px 5px 5px rgb(60, 60, 60); */
   margin: 20px;
 }
 
 .dice {
-  /* border-radius: 5px; */
-  max-width: 70%;
-  /* box-shadow: 5px 5px 5px rgb(60, 60, 60); */
-  background-color: blueviolet;
+  margin: 20px;
+}
+
+.tictactoe {
   margin: 20px;
 }

@@ -1,0 +1,37 @@
+main {
+    background-color: rgb(0, 168, 168);
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* .play-area {} */
+
+.play-area > p {
+    text-align: center;
+}
+
+.grid {
+    background-color: teal;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 300px;
+    width: 300px;
+    box-shadow: 3px 3px 3px rgb(0, 43, 43);
+}
+
+.square {
+    height: 90px;
+    width: 90px;
+    border-radius: 5px;
+}
+
+.new-game {
+    margin: 10px;
+}
