@@ -1,4 +1,4 @@
-.dice-set {
+.dice-main {
     min-width: 300px;
     display: flex;
     align-items: center;
@@ -11,19 +11,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    perspective: 600px;
 }
 
 /* D4 Die */
 
 .d4 {
-    position: relative;
-    margin: 100px auto;
     height: 500px;
     width: 100px;
+    position: relative;
+    margin: 100px auto;
     transform-style: preserve-3d;
-    animation: spin 10s linear infinite;
     transform-origin: 116px 200px 116px;
+    animation: spin 10s linear infinite;
 }
 
 @keyframes spin {
@@ -63,11 +62,20 @@
 
 /* D6 Die */
 
+.die-cube {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 600px;
+}
+
 .d6 {
-    font-size: 80px;
-    width: 160px;
     height: 160px;
+    width: 160px;
     margin: 40px auto;
+    font-size: 80px;
     transform-style: preserve-3d;
     transform: translateZ(-100px);
     transition: transform 1s;
@@ -79,12 +87,12 @@
 .d6.d6-show2 { transform: translateZ(-80px) rotateX( -90deg); }
 .d6.d6-show6 { transform: translateZ(-80px) rotateX(  90deg); }
 .d6-side {
-    position: absolute;
-    width: 160px;
-    height: 160px;
     background-color: rgba(255, 99, 71, 0.6);
-    border: 1px solid rgba(0,0,0,.5);
     color: white;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    border: 1px solid rgba(0,0,0,.5);
     text-align: center;
     line-height: 160px;
 }

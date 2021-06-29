@@ -8,7 +8,7 @@ import TicTacToe from './components/tictactoe';
 class App extends React.Component{
   render(){
     return (
-      <div className='main'>
+      <main className='app-main'>
 
         <div className='calculator'>
           <Calculator></Calculator>
@@ -26,7 +26,7 @@ class App extends React.Component{
           <TicTacToe></TicTacToe>
         </div>
 
-      </div>
+      </main>
     )
   }
 }

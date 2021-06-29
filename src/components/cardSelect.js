@@ -8,7 +8,8 @@ class CardSelect extends React.Component {
             suits: ['hearts', 'clubs', 'diamonds', 'spades'],
             cards: ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'],
             suit: '',
-            card: ''
+            card: '',
+            flipped: false
         }
         this.randomizer = this.randomizer.bind(this);
         this.clear = this.clear.bind(this);
@@ -24,9 +25,10 @@ class CardSelect extends React.Component {
     clear(){
         this.setState({
             suit: '',
-            card: ''
-        })
-    }
+            card: '',
+            flipped: false
+        });
+    };
 
     render(){
         let suit;
@@ -44,21 +46,39 @@ class CardSelect extends React.Component {
         for (var i = 0; i < this.state.card; i++) amount.push(<span key={i}>{suit}</span>);
 
         return (
-            <div className='card-body'>
-                <div className='card'>
-                    {this.state.suit 
-                        ? <div className='card-front'>
-                            <span className='top-left'>{this.state.card}{suit}</span>
+            <main className='card-main'>
+
+                <div className={`card ${this.state.flipped ? 'flipped' : ''}`}>
+                    <div className='flipping-area'>
+
+                        <div className='card-front'></div>
+
+                        <div className='card-back'>
+
+                            <div className='top-left'>
+                                <span>{this.state.card}</span>
+                                <span>{suit}</span>
+                            </div>
+
                             <span className='symbols'>{amount}</span>
-                            <span className='bottom-right'>{this.state.card}{suit}</span>
-                          </div> 
-                        : <div className='card-back'></div>
-                    }</div>
-                <div className='ran-cle'>
-                    <button onClick={() => this.randomizer()}>Is this your card?</button>
-                    <button onClick={() => this.clear()}>Clear</button>
+
+                            <div className='bottom-right'>
+                                <span className={`${this.state.flipped ? 'fade' : 'bottom'}`}>{this.state.card}</span>
+                                <span className={`${this.state.flipped ? 'fade' : 'bottom'}`}>{suit}</span>
+                            </div>
+
+                        </div> 
+                    </div>
                 </div>
-            </div>
+
+                <div className='ran-cle'>
+                    {this.state.suit 
+                        ? <button onClick={() => this.clear()}>Clear</button> 
+                        : <button onClick={() => {this.randomizer(); this.setState({flipped: !this.state.flipped})}}>Is this your card?</button>
+                    }
+                </div>
+
+            </main>
         )
     }
 }

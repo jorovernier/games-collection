@@ -1,4 +1,4 @@
-main {
+.ttt-main {
     background-color: rgb(0, 168, 168);
     width: 400px;
     border-radius: 5px;
@@ -16,14 +16,14 @@ main {
 
 .grid {
     background-color: teal;
+    height: 300px;
+    width: 300px;
     border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(0, 43, 43);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    height: 300px;
-    width: 300px;
-    box-shadow: 3px 3px 3px rgb(0, 43, 43);
 }
 
 .square {

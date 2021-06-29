@@ -37,13 +37,12 @@ class Dice extends React.Component {
             d10: '',
             d12: '',
             d20: ''
-        })
-    }
+        });
+    };
 
     render(){
-
-        return(
-            <div className='dice-set'>
+        return (
+            <main className='dice-main'>
 
                 {/* <div className='die'>
                     <div className={`d4 ${this.state.active4 ? `d4-show${this.state.d4}` : ''}`}>
@@ -57,7 +56,7 @@ class Dice extends React.Component {
                     </div>
                 </div> */}
 
-                <div className='die'>
+                <div className='die-cube'>
                     <div className={`d6 ${this.state.active6 ? `d6-show${this.state.d6}` : ''}`}>
                         <div className='d6-side d6-1'>1</div>
                         <div className='d6-side d6-6'>6</div>
@@ -66,9 +65,10 @@ class Dice extends React.Component {
                         <div className='d6-side d6-5'>5</div>
                         <div className='d6-side d6-2'>2</div>
                     </div>
-                    {/* <div> */}
+                    <div>
                         <button onClick={() => {this.roll(1, 7); this.setState({active6: true}); }}>Roll d6</button>
-                    {/* </div> */}
+                        <button className='die-clear' onClick={() => this.clear()}>Clear</button>
+                    </div>
                 </div>
 
                 {/* <div className='die'>
@@ -107,8 +107,9 @@ class Dice extends React.Component {
                     </div>
                 </div> */}
 
-                <button className='die-clear' onClick={() => this.clear()}>Clear</button>
-            </div>
+                {/* <button className='die-clear' onClick={() => this.clear()}>Clear</button> */}
+
+            </main>
         )
     }
 }

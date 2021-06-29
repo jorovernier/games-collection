@@ -19,12 +19,13 @@ class Calculator extends React.Component {
         this.clear = this.clear.bind(this);
         this.equals = this.equals.bind(this);
     }
+
     setMethod(boop){
         this.setState({method: boop});
     };
 
     setNumber(num){
-        if (!this.state.method) {
+        if (!this.state.method){
             if (!this.state.number1){
                 this.setState({number1: num})
             } else if (this.state.number1){
@@ -68,7 +69,7 @@ class Calculator extends React.Component {
     };
 
     clear(){
-        this.setState({number1: '', number2: '',number3:'', method: ''});
+        this.setState({number1: '', number2: '', number3:'', method: ''});
     };
 
     equals(num1, num2, method){
@@ -84,15 +85,21 @@ class Calculator extends React.Component {
     };
 
     render(){
-        return(
-            <div className='body'>
+        return (
+            <main className='calc-main'>
+
                 <div className='top-part'>
+
                     <div className='screen'>
                         <p className='display'>{this.state.number1 + this.state.method + this.state.number2 + (this.state.number3 ? ('=' + this.state.number3) : (''))}</p>
                     </div>
+
                     <button className='clear' onClick={() => this.clear()}>c</button>
+
                 </div>
+
                 <div className='keypad'>
+
                     <div className='numbers'>
                         <button className='num-butt' onClick={() => this.setNumber(1)}>1</button>
                         <button className='num-butt' onClick={() => this.setNumber(2)}>2</button>
@@ -106,14 +113,17 @@ class Calculator extends React.Component {
                         <button className='zero' onClick={() => this.setNumber(0)}>0</button>
                         <button className='equals' onClick={() => this.equals(this.state.number1, this.state.number2, this.state.method)}>=</button>
                     </div>
+
                     <div className='signs'>
                         <button className='sign-butt' onClick={() => this.setMethod('+')}>+</button>
                         <button className='sign-butt' onClick={() => this.setMethod('-')}>-</button>
                         <button className='sign-butt' onClick={() => this.setMethod('x')}>*</button>
                         <button className='sign-butt' onClick={() => this.setMethod('/')}>/</button>
                     </div>
+                    
                 </div>
-            </div>
+
+            </main>
         )
     }
 }

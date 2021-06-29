@@ -22,81 +22,12 @@ class TicTacToe extends React.Component {
             column2: [],
             column3: [],
             diagonal1: [],
-            diagonal2: [],
-            hasWon: false
+            diagonal2: []
         }
-        this.winner = this.winner.bind(this);
         this.setGrid = this.setGrid.bind(this);
         this.setPosition = this.setPosition.bind(this);
+        this.winner = this.winner.bind(this);
         this.clear = this.clear.bind(this);
-    }
-
-    winner(){
-        if(this.state.row1.length === 3){
-            if(this.state.row1.every(v => v === 'X')){
-                alert('X wins!');
-                this.clear();
-            } else if(this.state.row1.every(v => v === 'O')){
-                alert('O wins!');
-                this.clear();
-            }
-        } else if (this.state.row2.length === 3){
-            if(this.state.row2.every(v => v === 'X')){
-                alert('row2');
-                this.clear();
-            } else if(this.state.row2.every(v => v === 'O')){
-                alert('O wins!');
-                this.clear();
-            }
-        } else if (this.state.row3.length === 3){
-            if(this.state.row3.every(v => v === 'X')){
-                alert('row3');
-                this.clear();
-            } else if(this.state.row3.every(v => v === 'O')){
-                alert('O wins!');
-                this.clear();
-            }
-        } else if (this.state.column1.length === 3){
-            if(this.state.column1.every(v => v === 'X')){
-                alert('column1');
-                this.clear();
-            } else if(this.state.column1.every(v => v === 'O')){
-                alert('O wins!');
-                this.clear();
-            }
-        } else if (this.state.column2.length === 3){
-            if(this.state.column2.every(v => v === 'X')){
-                alert('column2');
-                this.clear();
-            } else if(this.state.column2.every(v => v === 'O')){
-                alert('O wins!');
-                this.clear();
-            }
-        } else if (this.state.column3.length === 3){
-            if(this.state.column3.every(v => v === 'X')){
-                alert('column3');
-                this.clear();
-            } else if(this.state.column3.every(v => v === 'O')){
-                alert('O wins!');
-                this.clear();
-            }
-        } else if (this.state.diagonal1.length === 3){
-            if(this.state.diagonal1.every(v => v === 'X')){
-                alert('diagonal1');
-                this.clear();
-            } else if(this.state.diagonal1.every(v => v === 'O')){
-                alert('O wins!');
-                this.clear();
-            }
-        } else if (this.state.diagonal2.length === 3){
-            if(this.state.diagonal2.every(v => v === 'X')){
-                alert('diagonal2');
-                this.clear();
-            } else if(this.state.diagonal2.every(v => v === 'O')){
-                alert('O wins!');
-                this.clear();
-            }
-        }
     }
 
     setGrid(grid){
@@ -115,13 +46,68 @@ class TicTacToe extends React.Component {
         } else {
             alert('CHEATER')
         };
-    }
+    };
 
     setPosition(state, player){
         this.setState({
             [state]: [...this.state[state], ...player]
-        })
-    }
+        });
+    };
+
+    winner(){
+        if(this.state.row1.length === 3 && this.state.row1.every(v => v === 'X')){
+            alert('X wins!');
+            this.clear();
+        } else if(this.state.row1.length === 3 && this.state.row1.every(v => v === 'O')){
+            alert('O wins!');
+            this.clear();
+        } else if(this.state.row2.length === 3 && this.state.row2.every(v => v === 'X')){
+            alert('X wins!');
+            this.clear();
+        } else if(this.state.row2.length === 3 && this.state.row2.every(v => v === 'O')){
+            alert('O wins!');
+            this.clear();
+        } else if(this.state.row3.length === 3 && this.state.row3.every(v => v === 'X')){
+            alert('X wins!');
+            this.clear();
+        } else if(this.state.row3.length === 3 && this.state.row3.every(v => v === 'O')){
+            alert('O wins!');
+            this.clear();
+        } else if(this.state.column1.length === 3 && this.state.column1.every(v => v === 'X')){
+            alert('X wins!');
+            this.clear();
+        } else if(this.state.column1.length === 3 && this.state.column1.every(v => v === 'O')){
+            alert('O wins!');
+            this.clear();
+        } else if(this.state.column2.length === 3 && this.state.column2.every(v => v === 'X')){
+            alert('X wins!');
+            this.clear();
+        } else if(this.state.column2.length === 3 && this.state.column2.every(v => v === 'O')){
+            alert('O wins!');
+            this.clear();
+        } else if(this.state.column3.length === 3 && this.state.column3.every(v => v === 'X')){
+            alert('X wins!');
+            this.clear();
+        } else if(this.state.column3.length === 3 && this.state.column3.every(v => v === 'O')){
+            alert('O wins!');
+            this.clear();
+        } else if(this.state.diagonal1.length === 3 && this.state.diagonal1.every(v => v === 'X')){
+            alert('X wins!');
+            this.clear();
+        } else if(this.state.diagonal1.length === 3 && this.state.diagonal1.every(v => v === 'O')){
+            alert('O wins!');
+            this.clear();
+        } else if(this.state.diagonal2.length === 3 && this.state.diagonal2.every(v => v === 'X')){
+            alert('X wins!');
+            this.clear();
+        } else if(this.state.diagonal2.length === 3 && this.state.diagonal2.every(v => v === 'O')){
+            alert('O wins!');
+            this.clear();
+        } else if(this.state.grid1 && this.state.grid2 && this.state.grid3 && this.state.grid4 && this.state.grid5 && this.state.grid6 && this.state.grid7 && this.state.grid8 && this.state.grid9){
+            alert("It's a tie!");
+            this.clear();
+        };
+    };
 
     clear(){
         this.setState({
@@ -143,14 +129,15 @@ class TicTacToe extends React.Component {
             column3: [],
             diagonal1: [],
             diagonal2: []
-        })
-    }
+        });
+    };
 
     render(){
         const {player} = this.state;
 
         return (
-            <main>
+            <main className='ttt-main'>
+
                 <div className='play-area'>
                     <p>It's {player}'s turn.</p>
                 
@@ -211,7 +198,9 @@ class TicTacToe extends React.Component {
 
                     </div>
                 </div>
+
                 <button className='new-game' onClick={() => this.clear()}>New Game</button>
+                
             </main>
         )
     }
