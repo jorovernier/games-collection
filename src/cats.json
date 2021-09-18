@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Jeremy",
+        "bio": "Classic party boy, loves having a good time.",
+        "image": "https://stickerly.pstatic.net/sticker_pack/13279e882d3a25af/YYN2BA/2/48b20592-f158-41f3-9456-4d1e02905628-001.png"
+    },
+    {
+        "id": 2,
+        "name": "Conan the Barbarian",
+        "bio": "DISAPOINTED",
+        "image": "https://pm1.narvii.com/7534/91402d78e9aeaceb74001b13a145895f21ee1471r1-870-870v2_hq.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Lord Darkness the Destroyer",
+        "bio": "Looks like they'll kill you, will kill you.",
+        "image": "https://img-9gag-fun.9cache.com/photo/a3Q5VW5_460s.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Philbert",
+        "bio": "Still lives with his mom.",
+        "image": "https://pbs.twimg.com/profile_images/1171753326691717120/lsyv3aU9_400x400.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Pam, who Death Forgot",
+        "bio": "And he's too scared to remember.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgzHzxWKvpaoF6QqlO3LjgASiphhJRzW8LiQ&usqp=CAU"
+    },
+    {
+        "id": 6,
+        "name": "Lester",
+        "bio": "*is confused*",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMnqFjX6s7HeD-eaRLQ1tjDCt9knnUcVqYHA&usqp=CAU"
+    },
+    {
+        "id": 7,
+        "name": "Smudge",
+        "bio": "Don't yell at him!",
+        "image": "https://i.pinimg.com/originals/f8/27/ed/f827ed9a704146f65b96226f430abf3c.png"
+    },
+    {
+        "id": 8,
+        "name": "Selma",
+        "bio": "Scares easy.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPiSNji0VMXxVGNeIHlBlg8SUpY5J8R0EODw&usqp=CAU"
+    }
+]
