@@ -5,6 +5,7 @@ import CardSelect from './components/cardSelect';
 import Dice from './components/dice';
 import TicTacToe from './components/tictactoe';
 import Cats from './components/cats';
+import CalcFunc from './functionals/calcFunc';
 
 class App extends React.Component{
   render(){
@@ -29,6 +30,10 @@ class App extends React.Component{
 
         <div className='cats'>
           <Cats></Cats>
+        </div>
+
+        <div>
+          <CalcFunc></CalcFunc>
         </div>
 
       </main>
