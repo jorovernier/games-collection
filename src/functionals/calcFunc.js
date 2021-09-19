@@ -8,8 +8,7 @@ export default function Calculator() {
     useEffect(() => {
         let number3 = num1 + num2;
         setNum3(number3);
-        console.log(num3)
-    }, [num1])
+    }, [num1, num2])
 
     function randomNums(){
         setNum1(Math.floor(Math.random() * 100));
@@ -19,7 +18,7 @@ export default function Calculator() {
     return (
         <main>
             <div>
-                <p id='sum'>They equal {num3}.</p>
+                <p id='sum'>{num1} + {num2} equals {num3}.</p>
                 <button onClick={() => randomNums()}>Add</button>
             </div>
         </main>

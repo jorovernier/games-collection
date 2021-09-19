@@ -6,6 +6,7 @@ import Dice from './components/dice';
 import TicTacToe from './components/tictactoe';
 import Cats from './components/cats';
 import CalcFunc from './functionals/calcFunc';
+import Counter from './functionals/counter';
 
 class App extends React.Component{
   render(){
@@ -32,8 +33,12 @@ class App extends React.Component{
           <Cats></Cats>
         </div>
 
-        <div>
+        <div className='calc-func'>
           <CalcFunc></CalcFunc>
+        </div>
+
+        <div className='counter'>
+          <Counter></Counter>
         </div>
 
       </main>
